@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>دليل هواتف الموظفين</title>
+  <script src="script.js" defer></script>
+  <style>
+    body { font-family: Arial, sans-serif; }
+    label, input { display: block; margin: 10px 0; }
+    #employeeList { margin-top: 20px; }
+  </style>
+</head>
+<body>
+  <h1>دليل هواتف الموظفين</h1>
+  <label for="searchInput">بحث:</label>
+  <input type="text" id="searchInput" placeholder="ابحث بالاسم أو القسم" onkeyup="filterEmployees()">
+  <label for="name">الاسم:</label>
+  <input type="text" id="name" placeholder="أدخل اسم الموظف">
+  <label for="department">القسم:</label>
+  <input type="text" id="department" placeholder="أدخل قسم الموظف">
+  <label for="email">البريد الإلكتروني:</label>
+  <input type="email" id="email" placeholder="أدخل البريد الإلكتروني">
+  <label for="phone">رقم الهاتف:</label>
+  <input type="text" id="phone" placeholder="أدخل رقم الهاتف">
+  <button id="saveButton" onclick="addEmployee()">إضافة موظف</button>
+  <button onclick="exportToPDF()">تصدير إلى PDF</button>
+  <button onclick="exportToExcel()">تصدير إلى Excel</button>
+  <ul id="employeeList"></ul>
+</body>
+</html>
